@@ -81,6 +81,7 @@ function ___profile_image(){
 	include('inc/profile_image.php');
 }
 
+
 function inject_asset($type, $url){
 	if ($type == 'stylesheet') {
 	?>
@@ -98,6 +99,7 @@ function inject_asset($type, $url){
 	}
 }
 
+
 function getproperfullname($userArray){
 		return $userArray['last_name'] . ", " . $userArray['first_name'] . " " . $userArray['middle_name'];
 }
@@ -106,3 +108,4 @@ function getProfilePicture(){
 	$userArray = $_SESSION['users_details'];
 	return hash('MD2', $userArray['user_id']).'.png';
 }
+

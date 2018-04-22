@@ -4,8 +4,11 @@
 	global $instructorClass;
 	$courses  = $subjectClass->showCourses("config.ini");
 	$instructors = $instructorClass->getInstructorNames("config.ini");
+<<<<<<< HEAD
 	$config = parse_ini_file("config.ini", true);
 	$web_link = $config["qrscan"]["website_link"];
+=======
+>>>>>>> origin/pr/8
  ?>
 <span style="display: none" id="web_link"><?php echo $web_link ?></span>
 <div class="modal-dialog" style="margin-top: 60px;">
@@ -101,7 +104,10 @@
 
 <script type="text/javascript">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/pr/8
 	$('body').on('click', '#generatePassword', function() {
 		
 		var web_link = $('#web_link').text() + "?mode=qrscan";
@@ -177,7 +183,10 @@
 		    		$('#printInformation').hide();
 		    		$('#confirmAccount').show();
 		    		$('#cancelCreation').show();
+<<<<<<< HEAD
 	    			$('#qrcode').qrcode(web_link + "&u=" + data["studentNumber"] + "&p=" + callback);
+=======
+>>>>>>> origin/pr/8
 
 	        		alert('Successfully Generated a Password');
 		    	}else {
@@ -200,7 +209,10 @@
 	    		$('#confirmAccount').hide();
 	    		$('#cancelCreation').hide();
 	    		alert('Account has been created');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/pr/8
 	    	}
 	    });
 	});
@@ -237,14 +249,32 @@
 				var sections = JSON.parse(callback);   
 				sections.sections.forEach(function(item){
 					$("#select-section").append('<option value="'+ item.year + item.section + '" default>'+ item.year + item.section +'</option>');
+<<<<<<< HEAD
 						console.log(callback);
+=======
+>>>>>>> origin/pr/8
 				});
 			}
 			);
 
+<<<<<<< HEAD
 	});
 
 	
+=======
+		$.post("inc/subjectlists.php", {
+			cid: course_id },
+			function(callback){   
+				var subjects = JSON.parse(callback);   
+				subjects.subjects.forEach(function(item){
+					$("#subjects").append('<option value="'+ item.subj_id +'" default>'+ item.course_code + " " + item.course_title +'</option>');
+				});
+			}
+			);
+	});
+
+
+>>>>>>> origin/pr/8
 	
 	
 </script>
